@@ -1,0 +1,39 @@
+#ocasal, #noiva {
+    background-color: #f2e7d0;
+}
+
+#foto-casal {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 0;
+    min-height: 0;
+}
+#foto-casal img {
+    width: 100%;
+    height: auto;
+}
+
+#foto-casal .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#foto-casal h1 {
+    margin: 0;
+    font-size: 2.4em;
+}
+
+#foto-casal p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    #foto-casal h1 {
+        font-size: 1.8em;
+    }
+}

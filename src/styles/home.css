@@ -1,0 +1,188 @@
+/*
+#2f4e25
+#47793b
+#70a05e
+#d9c6a5
+#f2e7d0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
+/* styles.css */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        color: #333;
+        background-color: #f4f4f4;
+        margin: 0;
+        margin-top: 45px; /* Compensa a altura do header para evitar sobreposição */
+        padding: 0;
+    }
+
+/* Header */    
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        background-color: #2f4e25;
+        padding: 15px;
+        z-index: 1000; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+        /*space between*/
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 15px;
+        font-weight: bold;
+        font-size: large;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+        color: #f2e7d0;
+    }
+    
+    section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px;
+        gap: 80px;
+        min-height: 500px;
+    }
+    
+    section#noiva {
+        flex-direction: row-reverse;
+    }
+
+    #foto-casal {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: white;
+        padding: 0;
+        min-height: 0;
+    }
+    #foto-casal img {
+        width: 100%;
+        height: auto;
+    }
+    
+    #foto-casal .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    #foto-casal h1 {
+        margin: 0;
+        font-size: 2.4em;
+    }
+    
+    #foto-casal p {
+        margin: 5px 0 0;
+        font-size: 1.2em;
+    }
+
+    /* conteiners */
+
+    .container-texto {
+        background-color: #2f4e25;
+        color: white;
+        text-align: center;
+        line-height: 1.4;
+        padding: 20px 40px 35px 40px;
+        margin: 0;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        min-height: 320px;
+        align-content: center;
+    }
+    .container-texto h2 {
+        font-family: 'Playfair Display', serif;
+        margin: 0 0 10px  0;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+
+    .container-texto p {
+        font-family: 'Montserrat', sans-serif;
+        margin: 10px 0;
+        font-size: 1.2em;
+        text-align: justify;        
+
+    }
+    
+    .container-foto {
+        margin: 0;
+        width: 50%;
+    }
+        
+    .container-foto img {
+        height: auto;
+        border-radius: 10px;
+        width: 100%;
+    }
+   
+
+    /* Footer */
+    .footer {
+        background-color: #2f4e25;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 0.9em;
+    }
+
+    .footer p {
+        margin: 5px;
+    }
+    
+
+@media (max-width: 768px) {
+    header nav a{
+        font-size: 0.8em;
+    }
+    #foto-casal h1 {
+        font-size: 1.8em;
+    }
+
+    section {
+        min-height: auto;
+        gap: 0;
+        flex-direction: column-reverse;
+        padding: 20px 50px;
+    }
+
+    .container-texto {
+        margin: 20px 0;
+        min-height: 0;
+    }
+
+    .container-texto h2 {
+        font-size: 1.5em;
+    }
+
+    .container-texto p {
+        font-size: 1em;
+    }
+
+}

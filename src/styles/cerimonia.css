@@ -1,0 +1,49 @@
+/* Seção de contagem regressiva */
+#tempo {
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  #tempo h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  #countdown {
+  }
+
+.digital-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.digit {
+  display: inline-block;
+  color: #2f4e25;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  width: 3rem;
+  height: 4rem;
+  line-height: 3rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.digit.colon {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  width: auto;
+  height: auto;
+  line-height: normal;
+  font-size: 2rem;
+}
