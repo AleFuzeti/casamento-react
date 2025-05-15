@@ -46,36 +46,24 @@ const Cerimonia = () => {
 
       <FotoTexto titulo="Cronograma">
         <table className="cronograma-table">
-          <thead>
-            <tr>
-              <th>Horário</th>
-              <th>Atividade</th>
-            </tr>
-          </thead>
           <tbody>
             <tr>
-              <td>16:00</td>
-              <td>Recepção dos convidados</td>
+              <td>15h Recepção dos convidados</td>
             </tr>
             <tr>
-              <td>16:30</td>
-              <td>Início da cerimônia</td>
+              <td>16h Início da cerimônia</td>
             </tr>
             <tr>
-              <td>18:00</td>
-              <td>Fotos com os noivos</td>
+              <td>17h Fotos com os noivos</td>
             </tr>
             <tr>
-              <td>18:30</td>
-              <td>Início do jantar</td>
+              <td>18h Início do jantar</td>
             </tr>
             <tr>
-              <td>21:00</td>
-              <td>Corte do Bolo</td>
+              <td>21h Corte do Bolo</td>
             </tr>
             <tr>
-              <td>22:00</td>
-              <td>Final de cerimônia</td>
+              <td>22h Final de cerimônia</td>
             </tr>
           </tbody>
         </table>

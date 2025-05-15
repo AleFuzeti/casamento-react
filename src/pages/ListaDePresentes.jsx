@@ -1,6 +1,7 @@
 // src/pages/ListaDePresentes.jsx
 import React, { useState, useEffect } from 'react';
 import '../styles/presentes.css';
+import FotoTexto from './FotoTexto';
 
 const ListaDePresentes = () => {
   const [presentes, setPresentes] = useState([]);
@@ -45,23 +46,12 @@ const ListaDePresentes = () => {
         </div>
       </section>
 
-      <section id="pix">
-        <div className="container-texto">
-          <h2>COMO FUNCIONA NOSSA LISTA DE PRESENTE</h2>
-          <p>
-            Devido aos noivos já possuírem a maioria dos itens necessários para a casa, optamos por uma lista de presentes virtual. Esses presentes são simbólicos e representam uma contribuição para a nossa lua de mel e vida a dois.
-          </p>
-          <p>
-            Os itens possuem cunho cômico e valores aproximados, para que você possa escolher o que mais lhe agrada. A contribuição é feita por PIX, onde você pode escolher o presente que deseja nos dar e fazer a contribuição diretamente.
-          </p>
-          <p>
-            Ao selecionar o presente, você será redirecionado ao código PIX e QR Code para efetuar a contribuição.
-          </p>
-          <p>
-            Agradecemos muito a sua contribuição e apoio em nosso grande dia!
-          </p>
-        </div>
-      </section>
+      <FotoTexto titulo="A Lista de Presentes">
+        <p>Devido aos noivos já possuírem a maioria dos itens necessários para a casa, optamos por uma lista de presentes virtual. Esses presentes são simbólicos e representam uma contribuição para a nossa lua de mel e vida a dois.</p>
+        <p>Os itens possuem cunho cômico e valores aproximados, para que você possa escolher o que mais lhe agrada. A contribuição é feita por PIX, onde você pode escolher o presente que deseja nos dar e fazer a contribuição diretamente.</p> 
+        <p>Ao selecionar o presente, você será redirecionado ao código PIX e QR Code para efetuar a contribuição.</p>
+        <p>Agradecemos muito a sua contribuição e apoio em nosso grande dia!</p>
+      </FotoTexto>
 
       <div id="opcoes-ordenacao">
         <button onClick={carregarPresentes}>Ordenar por Relevância</button>
