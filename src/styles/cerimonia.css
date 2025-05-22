@@ -1,12 +1,23 @@
 /* Estilo da tabela do cronograma */
 .cronograma-table {
   width: 100%;
-  border-collapse: separate; /* Alterado para permitir espaçamento */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
+}
+
+.cardapio-table {
+  text-align: justify;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  border-collapse: collapse; /* Colapsa as bordas */
+}
+
+.cardapio-table th,
+.cardapio-table td {
+  border: 2px solid #ffffff; /* Linhas internas dividindo as células */
+  padding: 10px;
+  text-align: left;
 }
 
 .cronograma-table th,
@@ -62,4 +73,62 @@
   height: auto;
   line-height: normal;
   font-size: 2rem;
+}
+
+/* Estilo para o título */
+.FotoTexto h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2f4e25;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Estilo para o parágrafo */
+.FotoTexto p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Estilo para as listas */
+.FotoTexto ul {
+  list-style-type: none; /* Remove os marcadores padrão */
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.FotoTexto ul li {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  color: #2f4e25;
+  background-color: rgba(47, 78, 37, 0.1); /* Fundo leve */
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Adiciona um ícone decorativo antes de cada item */
+.FotoTexto ul li::before {
+  content: '🍕'; /* Ícone de exemplo (pode ser alterado para outros) */
+  font-size: 1.5rem;
+  color: #2f4e25;
+}
+
+/* Estilo para as listas de bebidas e drinks */
+.FotoTexto ul li:nth-child(odd) {
+  background-color: rgba(47, 78, 37, 0.2); /* Alterna a cor de fundo */
+}
+
+.FotoTexto ul li:nth-child(even) {
+  background-color: rgba(47, 78, 37, 0.1);
 }

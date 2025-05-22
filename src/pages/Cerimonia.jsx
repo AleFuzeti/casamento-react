@@ -76,8 +76,36 @@ const Cerimonia = () => {
       </FotoTexto>
 
       <FotoTexto titulo="Cardápio">
-        <p>O cardápio escolhido para a cerimônia é um rodízio de pizza, com diversos sabores, doces e salgados, incluindo opções vegetarianas.</p>
-        <p>Para beber, teremos água, refrigerante, suco e cerveja.</p>
+        <table className="cardapio-table">
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th>Itens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pizzas Salgadas</td>
+              <td>4 queijos, Mussarela, Marguerita, Frango com Catupiry</td>
+            </tr>
+            <tr>
+              <td>Pizzas Doces</td>
+              <td>Brigadeiro, Romeu e Julieta</td>
+            </tr>
+            <tr>
+              <td>Bebidas</td>
+              <td>Cerveja, Quentão, Energético, Água com e sem gás, Coca-Cola, Guaraná</td>
+            </tr>
+            <tr>
+              <td>Drinks</td>
+              <td>
+                Moreco: Essência de morango com vodka/água com gás<br />
+                Drink da Carol: Maçã verde com vodka/água com gás<br />
+                Drink do Ale: Essência de limão e hortelã com vodka/água com gás
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <p>Esperamos que todos aproveitem!</p>
       </FotoTexto>
 
