@@ -1,12 +1,18 @@
 // src/pages/ConfirmarPresenca.jsx
 import React, { useState } from 'react';
-
-const scriptURL = "https://script.google.com/macros/s/AKfycbwpRMAXUIrdaAgqnjgNIfrr2--t4WUi2OjUPD2MupKixGI3ZlRU68m-PFXAX-UHvIAI/exec";
+import '../styles/confirmar-presenca.css';
+import convidadosData from '../data/convidados.json';
 
 const ConfirmarPresenca = () => {
   const [codigo, setCodigo] = useState('');
   const [listaConvidados, setListaConvidados] = useState([]);
   const [formVisible, setFormVisible] = useState(false);
+
+  // Simula o "outro JSON" dos confirmados usando localStorage
+  const salvarConfirmados = (novosConfirmados) => {
+    const confirmadosAtuais = JSON.parse(localStorage.getItem('confirmados') || '[]');
+    localStorage.setItem('confirmados', JSON.stringify([...confirmadosAtuais, ...novosConfirmados]));
+  };
 
   const buscarConvidados = () => {
     const codigoTrim = codigo.trim();
@@ -15,17 +21,15 @@ const ConfirmarPresenca = () => {
       return;
     }
 
-    fetch(`${scriptURL}?codigo=${codigoTrim}`)
-      .then(response => response.json())
-      .then(nomes => {
-        if (nomes.length === 0) {
-          alert("Código não encontrado.");
-          return;
-        }
-        setListaConvidados(nomes);
-        setFormVisible(true);
-      })
-      .catch(error => console.error("Erro:", error));
+    const convidado = convidadosData.find(
+      c => c.codigo.toLowerCase() === codigoTrim.toLowerCase()
+    );
+    if (!convidado || convidado.nomes.length === 0) {
+      alert("Código não encontrado.");
+      return;
+    }
+    setListaConvidados(convidado.nomes);
+    setFormVisible(true);
   };
 
   const confirmarPresenca = (e) => {
@@ -38,26 +42,29 @@ const ConfirmarPresenca = () => {
       return;
     }
 
-    fetch(scriptURL, {
-      method: "POST",
-      body: JSON.stringify({ codigo, nomes: nomesSelecionados }),
-      headers: { "Content-Type": "application/json" }
-    })
-      .then(response => response.text())
-      .then(result => {
-        alert(result);
-        setFormVisible(false);
-        setListaConvidados([]);
-        setCodigo('');
-      })
-      .catch(error => console.error("Erro:", error));
+    // Atualiza o status de confirmado no array local
+    const novosConfirmados = [];
+    const novaLista = listaConvidados.map(c => {
+      if (nomesSelecionados.includes(c.nome) && !c.confirmado) {
+        novosConfirmados.push({ ...c, confirmado: true });
+        return { ...c, confirmado: true };
+      }
+      return c;
+    });
+
+    // Salva os confirmados no "outro JSON" (localStorage)
+    salvarConfirmados(novosConfirmados);
+
+    alert(`Presença confirmada para: ${novosConfirmados.map(c => c.nome).join(', ')}`);
+    setFormVisible(false);
+    setListaConvidados([]);
+    setCodigo('');
   };
 
   return (
     <main>
       <header>
         <h1>Confirmação de Presença</h1>
-        {/* Use Link do react-router-dom para navegar */}
       </header>
 
       <section>
@@ -74,11 +81,17 @@ const ConfirmarPresenca = () => {
           <form id="confirmacao-form" onSubmit={confirmarPresenca}>
             <h3>Selecione os convidados confirmados:</h3>
             <div id="lista-convidados">
-              {listaConvidados.map((nome, index) => (
+              {listaConvidados.map((c, index) => (
                 <div key={index}>
-                  <label>
-                    <input type="checkbox" name="convidado" value={nome} />
-                    {` ${nome}`}
+                  <label style={{ color: c.confirmado ? 'gray' : '#2f4e25' }}>
+                    <input
+                      type="checkbox"
+                      name="convidado"
+                      value={c.nome}
+                      disabled={c.confirmado}
+                    />
+                    {` ${c.nome}`}
+                    {c.confirmado && " (Já confirmado)"}
                   </label>
                 </div>
               ))}
