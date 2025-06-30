@@ -42,7 +42,8 @@ app.post('/api/confirmar', (req, res) => {
 
   // Atualiza o convidado removendo ou adicionando nomes conforme enviado (inclusive vazio)
   const novosConvidados = convidados.map(convidado => {
-    if (convidado.codigo === codigo) {
+    // Compara códigos em maiúsculo para aceitar QWE12 e qwe12
+    if ((convidado.codigo || '').toUpperCase() === (codigo || '').toUpperCase()) {
       encontrado = true;
       console.log('✅ Código encontrado:', codigo);
       console.log('👥 Convidado antes da atualização:', convidado);
