@@ -1,134 +1,250 @@
-/* Estilo da tabela do cronograma */
+/* Estilos específicos para a página Cerimônia */
+
+/* Tabelas estilizadas */
 .cronograma-table {
   width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--warm-white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow);
+  margin: 20px 0;
+}
+
+.cronograma-table td {
+  color: black;
+  padding: 20px 25px;
+  border-bottom: 1px solid rgba(45, 80, 22, 0.1);
+  background: linear-gradient(var(--cream) 100%);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.cronograma-table td:hover {
+  background: linear-gradient(90deg, var(--light-green) 0%, var(--cream) 100%);
+  transform: translateX(5px);
+  box-shadow: 5px 0 15px rgba(45, 80, 22, 0.2);
+}
+
+.cronograma-table td::before {
+  content: "🕐";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 1.2rem;
 }
 
 .cardapio-table {
-  text-align: justify;
   width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.2rem;
-  border-collapse: collapse; /* Colapsa as bordas */
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--warm-white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow);
+  margin: 20px 0;
 }
 
-.cardapio-table th,
+.cardapio-table th {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  color: white;
+  padding: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
 .cardapio-table td {
-  border: 2px solid #ffffff; /* Linhas internas dividindo as células */
-  padding: 10px;
-  text-align: left;
+  padding: 20px;
+  border-bottom: 1px solid rgba(45, 80, 22, 0.1);
+  transition: background 0.3s ease;
+  color: var(--primary-green);
 }
 
-.cronograma-table th,
-.cronograma-table td {
-  padding: 15px 20px;
+.cardapio-table tr:nth-child(even) td {
+  background: var(--cream);
+}
+
+.cardapio-table tr:hover td {
+  background: var(--light-green);
+  color: var(--text-dark);
+}
+
+.cardapio-table td:first-child {
+  font-weight: 600;
+  color: var(--primary-green);
+  width: 30%;
 }
 
 /* Seção de contagem regressiva */
-#tempo {
-    padding: 50px 20px;
-    color: white;
-    text-align: center;
-  }
-  
-  #tempo h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  #countdown {
-  }
-
 .digital-clock {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  font-family: 'Courier New', Courier, monospace;
+  gap: 15px;
+  font-family: "Playfair Display", serif;
+  margin: 40px 0;
+  padding: 30px;
+  background: linear-gradient(135deg, var(--warm-white) 0%, var(--cream) 100%);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px var(--shadow);
 }
 
 .digit {
-  display: inline-block;
-  color: #2f4e25;
-  background-color: rgba(255, 255, 255, 0.5);
-  font-size: 2.4rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-green);
+  background: linear-gradient(135deg, white 0%, var(--cream) 100%);
+  font-size: 2.5rem;
   font-weight: bold;
-  padding: 5px;
-  border-radius: 5px;
-  text-align: center;
-  width: 3rem;
+  width: 4rem;
   height: 4rem;
-  line-height: 3rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  /* box-shadow: 0 8px 20px rgba(45, 80, 22, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.8); */
+  transition: all 0.3s ease;
+  animation: digitPulse 2s infinite;
+}
+
+.digit:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(45, 80, 22, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.9);
 }
 
 .digit.colon {
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: var(--gold);
   width: auto;
   height: auto;
-  line-height: normal;
   font-size: 2rem;
+  box-shadow: none;
+  animation: colonBlink 1s infinite;
 }
 
-/* Estilo para o título */
-.FotoTexto h2 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #2f4e25;
-  text-align: center;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+@keyframes digitPulse {
+  0%,
+  100% {
+    box-shadow: 0 8px 20px rgba(45, 80, 22, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    box-shadow: 0 12px 30px rgba(45, 80, 22, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.9);
+  }
 }
 
-/* Estilo para o parágrafo */
-.FotoTexto p {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.2rem;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 15px;
+@keyframes colonBlink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0.3;
+  }
 }
 
-/* Estilo para as listas */
-.FotoTexto ul {
-  list-style-type: none; /* Remove os marcadores padrão */
-  padding: 0;
-  margin: 0 0 20px 0;
+/* Mapa estilizado */
+.mapa {
+  margin: 30px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px var(--shadow);
+  transition: transform 0.3s ease;
 }
 
-.FotoTexto ul li {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.2rem;
-  color: #2f4e25;
-  background-color: rgba(47, 78, 37, 0.1); /* Fundo leve */
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.mapa:hover {
+  transform: scale(1.02);
 }
 
-/* Adiciona um ícone decorativo antes de cada item */
-.FotoTexto ul li::before {
-  content: '🍕'; /* Ícone de exemplo (pode ser alterado para outros) */
-  font-size: 1.5rem;
-  color: #2f4e25;
+.mapa iframe {
+  border-radius: 20px;
+  filter: grayscale(20%) contrast(1.1);
+  transition: filter 0.3s ease;
 }
 
-/* Estilo para as listas de bebidas e drinks */
-.FotoTexto ul li:nth-child(odd) {
-  background-color: rgba(47, 78, 37, 0.2); /* Alterna a cor de fundo */
+.mapa:hover iframe {
+  filter: grayscale(0%) contrast(1.2);
 }
 
-.FotoTexto ul li:nth-child(even) {
-  background-color: rgba(47, 78, 37, 0.1);
+/* Estilos especiais para títulos */
+.container-texto h2 {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.container-texto h2::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--light-green) 100%);
+  border-radius: 2px;
+}
+
+/* Efeitos especiais para parágrafos */
+.container-texto p {
+  position: relative;
+  margin: 20px 0;
+  padding: 15px 0;
+}
+
+.container-texto p:hover {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+/* Responsividade para tabelas */
+@media (max-width: 768px) {
+  .cardapio-table,
+  .cronograma-table {
+    font-size: 0.9rem;
+  }
+
+  .cardapio-table th,
+  .cardapio-table td,
+  .cronograma-table td {
+    padding: 15px 10px;
+  }
+
+  .digital-clock {
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .digit {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.8rem;
+  }
+
+  .digit.colon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardapio-table,
+  .cronograma-table {
+    font-size: 0.8rem;
+  }
+
+  .digital-clock {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .digit {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.4rem;
+  }
 }

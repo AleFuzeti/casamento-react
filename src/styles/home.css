@@ -1,188 +1,366 @@
-/*
-#2f4e25
-#47793b
-#70a05e
-#d9c6a5
-#f2e7d0
-*/
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
-/* styles.css */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+:root {
+  --primary-green: #2d5016;
+  --secondary-green: #4a7c59;
+  --accent-green: #6b9080;
+  --light-green: #a4c3b2;
+  --cream: #f6f1eb;
+  --warm-white: #fefcf8;
+  --gold: #d4af37;
+  --text-dark: #2c2c2c;
+  --text-light: #666;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-hover: rgba(0, 0, 0, 0.15);
+}
 
-    body {
-        font-family: 'Montserrat', sans-serif;
-        color: #333;
-        background-color: #f4f4f4;
-        margin: 0;
-        margin-top: 45px; /* Compensa a altura do header para evitar sobreposição */
-        padding: 0;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Header */    
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-dark);
+  background: linear-gradient(135deg, var(--warm-white) 0%, var(--cream) 100%);
+  margin: 0;
+  margin-top: 80px;
+  padding: 0;
+  line-height: 1.6;
+}
 
-        background-color: #2f4e25;
-        padding: 15px;
-        z-index: 1000; 
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    }
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  padding: 20px 0;
+  z-index: 1000;
+  box-shadow: 0 8px 32px rgba(45, 80, 22, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
 
-    nav {
-        /*space between*/
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
+}
 
-    nav a {
-        color: white;
-        margin: 0 15px;
-        font-weight: bold;
-        font-size: large;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-    }
+nav a {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
 
-    nav a:hover {
-        text-decoration: underline;
-        color: #f2e7d0;
-    }
-    
-    section{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 100px;
-        gap: 80px;
-        min-height: 500px;
-    }
-    
-    section#noiva {
-        flex-direction: row-reverse;
-    }
+nav a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
 
-    #foto-casal {
-        position: relative;
-        width: 100%;
-        text-align: center;
-        color: white;
-        padding: 0;
-        min-height: 0;
-    }
-    #foto-casal img {
-        width: 100%;
-        height: auto;
-    }
-    
-    #foto-casal .overlay {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%);
-    }
-    
-    #foto-casal h1 {
-        margin: 0;
-        font-size: 2.4em;
-    }
-    
-    #foto-casal p {
-        margin: 5px 0 0;
-        font-size: 1.2em;
-    }
+nav a:hover::before {
+  left: 100%;
+}
 
-    /* conteiners */
+nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
 
-    .container-texto {
-        background-color: #2f4e25;
-        color: white;
-        text-align: center;
-        line-height: 1.4;
-        padding: 20px 40px 35px 40px;
-        margin: 0;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        min-height: 320px;
-        align-content: center;
-    }
-    .container-texto h2 {
-        font-family: 'Playfair Display', serif;
-        margin: 0 0 10px  0;
-        font-size: 2em;
-        text-transform: uppercase;
-    }
+/* Sections */
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  gap: 60px;
+  min-height: 600px;
+  position: relative;
+}
 
-    .container-texto p {
-        font-family: 'Montserrat', sans-serif;
-        margin: 10px 0;
-        font-size: 1.2em;
-        text-align: justify;        
+section.foto-texto {
+  background: var(--warm-white);
+  margin: 40px 0;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    }
-    
-    .container-foto {
-        margin: 0;
-        width: 50%;
-    }
-        
-    .container-foto img {
-        height: auto;
-        border-radius: 10px;
-        width: 100%;
-    }
-   
+section.foto-texto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 80px var(--shadow-hover);
+}
 
-    /* Footer */
-    .footer {
-        background-color: #2f4e25;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        font-size: 0.9em;
-    }
+section.foto-texto:nth-child(even) {
+  background: linear-gradient(135deg, var(--cream) 0%, var(--light-green) 100%);
+}
 
-    .footer p {
-        margin: 5px;
-    }
-    
+/* Hero Section */
+#foto-casal {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 0;
+  min-height: 70vh;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 0;
+}
+
+#foto-casal img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  filter: brightness(0.7);
+  transition: transform 0.3s ease;
+}
+
+#foto-casal:hover img {
+  transform: scale(1.05);
+}
+
+#foto-casal .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+#foto-casal h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  animation: fadeInUp 1s ease-out;
+}
+
+#foto-casal p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Containers */
+.container-texto {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  color: white;
+  text-align: center;
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(45, 80, 22, 0.3);
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-texto::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+.container-texto h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.container-texto h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+.container-texto p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.container-foto {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.container-foto img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  transition: transform 0.5s ease;
+  box-shadow: 0 15px 40px var(--shadow);
+}
+
+.container-foto:hover img {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  section {
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
 
 @media (max-width: 768px) {
-    header nav a{
-        font-size: 0.8em;
-    }
-    #foto-casal h1 {
-        font-size: 1.8em;
-    }
+  body {
+    margin-top: 70px;
+  }
 
-    section {
-        min-height: auto;
-        gap: 0;
-        flex-direction: column-reverse;
-        padding: 20px 50px;
-    }
+  header {
+    padding: 15px 0;
+  }
 
-    .container-texto {
-        margin: 20px 0;
-        min-height: 0;
-    }
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 15px;
+  }
 
-    .container-texto h2 {
-        font-size: 1.5em;
-    }
+  nav a {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
 
-    .container-texto p {
-        font-size: 1em;
-    }
+  #foto-casal h1 {
+    font-size: 2.5rem;
+  }
 
+  #foto-casal p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  section {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+    min-height: auto;
+  }
+
+  .container-foto {
+    width: 100%;
+  }
+
+  .container-texto {
+    padding: 40px 30px;
+    min-height: auto;
+  }
+
+  .container-texto h2 {
+    font-size: 2rem;
+  }
+
+  .container-texto p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+
+  #foto-casal h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+
+  .container-texto {
+    padding: 30px 20px;
+  }
+
+  .container-texto h2 {
+    font-size: 1.6rem;
+  }
 }

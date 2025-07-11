@@ -79,7 +79,7 @@ const ListaDePresentes = () => {
         }}>
           <div id="overlay-content" onClick={(e) => e.stopPropagation()}>
             <img src="/assets/pix.jpeg" alt="Pix" style={{ height: 'auto' }} />
-            <p style={{ color: 'white', fontSize: '1.5em', margin: '20px 0' }}>PIX(cel): 43988030433</p>
+            <p style={{fontSize: '1.5em', margin: '20px 0' }}>PIX(cel): 43988030433</p>
             <button onClick={fecharOverlay}>Fechar</button>
           </div>
         </div>

@@ -22,12 +22,12 @@ const Home = () => {
       </FotoTexto>
 
       <FotoTexto imagem="/assets/curiosidades.png" alt="Curiosidades" titulo="Curiosidades sobre o casal">
-        <p>• Adoram jogos de tabuleiro.</p>
-        <p>• Adoram cozinhar juntos e experimentar novas receitas.</p>
-        <p>• Adoram viajar e conhecer novos lugares.</p>
-        <p>• Adoram fazer trilhas e estar em contato com a natureza.</p>
-        <p>• Adoram fazer maratonas de séries e filmes.</p>
-        <p>• Adoram dançar e cantar juntos.</p>
+        <p>Adoram jogos de tabuleiro.</p>
+        <p>Adoram cozinhar juntos e experimentar novas receitas.</p>
+        <p>Adoram viajar e conhecer novos lugares.</p>
+        <p>Adoram fazer trilhas e estar em contato com a natureza.</p>
+        <p>Adoram fazer maratonas de séries e filmes.</p>
+        <p>Adoram dançar e cantar juntos.</p>
       </FotoTexto>
 
       <FotoTexto imagem="/assets/noiva.jpeg" alt="Noiva" titulo="Sobre a Noiva" reverse>

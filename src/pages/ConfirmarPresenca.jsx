@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/confirmar-presenca.css';
 
-const DATA_LIMITE = new Date('2025-06-30T23:59:59');
+const DATA_LIMITE = new Date('2025-07-30T23:59:59');
 
 const ConfirmarPresenca = () => {
   const [codigo, setCodigo] = useState('');
