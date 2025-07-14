@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/casamento-react/static/css/main.43321cde.css",
+    "main.js": "/casamento-react/static/js/main.db709c81.js",
+    "index.html": "/casamento-react/index.html",
+    "main.43321cde.css.map": "/casamento-react/static/css/main.43321cde.css.map",
+    "main.db709c81.js.map": "/casamento-react/static/js/main.db709c81.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43321cde.css",
+    "static/js/main.db709c81.js"
+  ]
+}
