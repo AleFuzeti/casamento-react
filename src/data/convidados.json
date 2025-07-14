@@ -1,12 +1,14 @@
 [
   {
-    "confirmado": false,
+    "confirmado": true,
     "codigo": "QWE12",
     "nomes": [
       "Cássia Fredegotto",
       "Edson Akira Ito"
     ],
-    "confirmados": []
+    "confirmados": [
+      "Cássia Fredegotto"
+    ]
   },
   {
     "confirmado": false,
@@ -47,7 +49,7 @@
     "confirmados": []
   },
   {
-    "confirmado": false,
+    "confirmado": true,
     "codigo": "HJK23",
     "nomes": [
       "Ernesto",
@@ -56,7 +58,11 @@
       "Mateus",
       "Bel"
     ],
-    "confirmados": []
+    "confirmados": [
+      "Gi",
+      "Edilene",
+      "Ernesto"
+    ]
   },
   {
     "confirmado": false,
