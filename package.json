@@ -10,7 +10,10 @@
     "@testing-library/user-event": "^13.5.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "firebase": "^12.0.0",
     "gh-pages": "^6.3.0",
+    "qrcode": "^1.5.4",
+    "qrcode.js": "^0.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.3.0",
@@ -18,14 +21,17 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently \"npm run start-react\" \"npm run start-server\"",
+    "start": "nvm use 22 && concurrently \"npm run start-react\" \"npm run start-server\"",
     "start-react": "react-scripts start",
     "start-server": "node server/server.js",
+    "start-static": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "migrate-to-firebase": "node scripts/migrateToFirebase.js",
+    "build-and-deploy": "npm run build && npm run deploy"
   },
   "eslintConfig": {
     "extends": [

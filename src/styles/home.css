@@ -94,28 +94,35 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 60px;
-  gap: 60px;
+  padding: 80px 100px;
+  gap: 100px;
   min-height: 600px;
   position: relative;
+  margin: 80px 60px;
 }
 
 section.foto-texto {
-  background: var(--warm-white);
-  margin: 40px 0;
+  background: linear-gradient(145deg, rgba(164, 195, 178, 0.25), rgba(107, 144, 128, 0.15));
+  margin: 60px 120px;
   border-radius: 20px;
-  box-shadow: 0 20px 60px var(--shadow);
+  box-shadow: 
+    0 25px 70px rgba(107, 144, 128, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(107, 144, 128, 0.15);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 section.foto-texto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 30px 80px var(--shadow-hover);
+  transform: translateY(-8px);
+  box-shadow: 
+    0 35px 90px rgba(107, 144, 128, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 section.foto-texto:nth-child(even) {
-  background: linear-gradient(135deg, var(--cream) 0%, var(--light-green) 100%);
+  background: linear-gradient(145deg, rgba(107, 144, 128, 0.2), rgba(164, 195, 178, 0.15));
 }
 
 /* Hero Section */
@@ -172,12 +179,15 @@ section.foto-texto:nth-child(even) {
 
 /* Containers */
 .container-texto {
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
-  color: white;
+  background: linear-gradient(145deg, rgba(107, 144, 128, 0.08), rgba(164, 195, 178, 0.12));
+  color: var(--text-dark);
   text-align: center;
-  padding: 60px 50px;
+  padding: 80px 70px;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(45, 80, 22, 0.3);
+  box-shadow: 
+    0 20px 50px rgba(107, 144, 128, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(107, 144, 128, 0.25);
   width: 100%;
   min-height: 400px;
   display: flex;
@@ -185,6 +195,8 @@ section.foto-texto:nth-child(even) {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(15px);
+  margin: 30px;
 }
 
 .container-texto::before {
@@ -194,8 +206,8 @@ section.foto-texto:nth-child(even) {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  animation: rotate 20s linear infinite;
+  background: radial-gradient(circle, rgba(107, 144, 128, 0.12) 0%, rgba(164, 195, 178, 0.08) 40%, transparent 70%);
+  animation: rotate 25s linear infinite;
 }
 
 .container-texto h2 {
@@ -207,6 +219,8 @@ section.foto-texto:nth-child(even) {
   letter-spacing: 2px;
   position: relative;
   z-index: 1;
+  color: var(--primary-green);
+  text-shadow: 0 2px 4px rgba(45, 80, 22, 0.1);
 }
 
 .container-texto h2::after {
@@ -214,10 +228,10 @@ section.foto-texto:nth-child(even) {
   position: absolute;
   bottom: -10px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); 
   width: 80px;
   height: 3px;
-  background: var(--gold);
+  background: linear-gradient(90deg, var(--secondary-green) 0%, var(--primary-green) 50%, var(--accent-green) 100%);
   border-radius: 2px;
 }
 
@@ -228,7 +242,26 @@ section.foto-texto:nth-child(even) {
   text-align: justify;
   position: relative;
   z-index: 1;
-  opacity: 0.95;
+  color: var(--text-dark);
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 0 20px;
+}
+
+/* Efeito especial para palavras-chave em verde */
+.container-texto p strong {
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+/* Destaque especial para números ou datas */
+.container-texto p em {
+  color: var(--secondary-green);
+  font-style: normal;
+  font-weight: 500;
+  background: linear-gradient(120deg, rgba(164, 195, 178, 0.2) 0%, rgba(107, 144, 128, 0.1) 100%);
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
 .container-foto {
@@ -236,6 +269,7 @@ section.foto-texto:nth-child(even) {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  margin: 30px;
 }
 
 .container-foto img {
@@ -274,8 +308,22 @@ section.foto-texto:nth-child(even) {
 /* Responsive Design */
 @media (max-width: 1024px) {
   section {
-    padding: 60px 40px;
-    gap: 40px;
+    padding: 60px 80px;
+    gap: 80px;
+    margin: 60px 50px;
+  }
+
+  .container-texto {
+    padding: 60px 50px;
+    margin: 20px;
+  }
+
+  .container-foto {
+    margin: 20px;
+  }
+
+  section.foto-texto {
+    margin: 50px 80px;
   }
 
   nav {
@@ -319,18 +367,25 @@ section.foto-texto:nth-child(even) {
 
   section {
     flex-direction: column;
-    padding: 40px 20px;
-    gap: 30px;
+    padding: 40px 40px;
+    gap: 50px;
     min-height: auto;
+    margin: 40px 30px;
+  }
+
+  section.foto-texto {
+    margin: 40px 50px;
   }
 
   .container-foto {
     width: 100%;
+    margin: 15px;
   }
 
   .container-texto {
-    padding: 40px 30px;
+    padding: 50px 50px;
     min-height: auto;
+    margin: 15px;
   }
 
   .container-texto h2 {
@@ -339,6 +394,7 @@ section.foto-texto:nth-child(even) {
 
   .container-texto p {
     font-size: 1rem;
+    padding: 0 15px;
   }
 }
 
@@ -353,14 +409,52 @@ section.foto-texto:nth-child(even) {
   }
 
   section {
-    padding: 30px 15px;
+    padding: 30px 30px;
+    margin: 30px 20px;
+  }
+
+  section.foto-texto {
+    margin: 30px 30px;
   }
 
   .container-texto {
-    padding: 30px 20px;
+    padding: 40px 40px;
+    margin: 15px;
   }
 
   .container-texto h2 {
     font-size: 1.6rem;
   }
+
+  .container-texto p {
+    padding: 0 10px;
+  }
+
+  .container-foto {
+    margin: 15px;
+  }
+}
+
+/* Melhorias adicionais na tipografia */
+.container-texto h2,
+.container-texto p {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container-texto p {
+  letter-spacing: 0.3px;
+  word-spacing: 1px;
+}
+
+/* Efeito de entrada suave */
+section.foto-texto {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Estados de foco melhorados para acessibilidade */
+.container-texto:focus-within {
+  outline: 3px solid rgba(107, 144, 128, 0.5);
+  outline-offset: 4px;
 }

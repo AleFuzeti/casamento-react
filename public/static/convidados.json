@@ -1,0 +1,283 @@
+[
+  {
+    "confirmado": true,
+    "codigo": "QWE12",
+    "nomes": [
+      "Cássia Fredegotto",
+      "Edson Akira Ito"
+    ],
+    "confirmados": [
+      "Cássia Fredegotto"
+    ]
+  },
+  {
+    "confirmado": false,
+    "codigo": "RTY34",
+    "nomes": [
+      "Marina Fredegotto",
+      "Rafael Sakai",
+      "Kauê Sakai",
+      "Lara Sakai"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "UIO56",
+    "nomes": [
+      "Marina Fredegotto"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "PAS78",
+    "nomes": [
+      "Cecilia Fredegotto",
+      "Valdir"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "DFG91",
+    "nomes": [
+      "Ida",
+      "gilson",
+      "Lucas"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": true,
+    "codigo": "HJK23",
+    "nomes": [
+      "Ernesto",
+      "Edilene",
+      "Gi",
+      "Mateus",
+      "Bel"
+    ],
+    "confirmados": [
+      "Gi",
+      "Edilene",
+      "Ernesto"
+    ]
+  },
+  {
+    "confirmado": false,
+    "codigo": "LZX45",
+    "nomes": [
+      "Bia",
+      "namo",
+      "Lucas"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "CVB67",
+    "nomes": [
+      "Efren",
+      "Prima",
+      "Prima",
+      "Nara",
+      "marido nara"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "NMQ89",
+    "nomes": [
+      "Primo",
+      "Primo",
+      "F primo",
+      "M primo",
+      "Cris",
+      "Tio"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "qaz14",
+    "nomes": [
+      "Joana",
+      "Rober",
+      "Luigi",
+      "Vih",
+      "namo",
+      "namo"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "wsx25",
+    "nomes": [
+      "Ana",
+      "Bruna",
+      "Sol",
+      "Ay",
+      "Renan",
+      "Icaro"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "edc63",
+    "nomes": [
+      "Bruna",
+      "Namo",
+      "Lucas"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "rfv74",
+    "nomes": [
+      "Tata",
+      "Deva",
+      "Julia",
+      "Gabriel",
+      "Livia",
+      "Luiza",
+      "Namo"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "tgb85",
+    "nomes": [
+      "Marco",
+      "Bia",
+      "Lais"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "yhn96",
+    "nomes": [
+      "Vini",
+      "Arthur",
+      "Kenzo"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "ujm98",
+    "nomes": [
+      "Ana",
+      "vitor"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "iko76",
+    "nomes": [
+      "ji",
+      "jader"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "lpq47",
+    "nomes": [],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "qaw48",
+    "nomes": [],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "zse59",
+    "nomes": [
+      "Synthia",
+      "edw",
+      "Eduardo",
+      "Bianca"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "xdr67",
+    "nomes": [
+      "Wand",
+      "iara",
+      "Guilherme",
+      "Henrique"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "cft15",
+    "nomes": [
+      "Val",
+      "sergio",
+      "Arthur",
+      "Débora"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "vgy26",
+    "nomes": [
+      "Cleiton",
+      "maíra",
+      "filha"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "bhu34",
+    "nomes": [
+      "Ro",
+      "thais",
+      "bella",
+      "rodriguinho"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "nji97",
+    "nomes": [
+      "Pai +4?"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "mko64",
+    "nomes": [
+      "Pri",
+      "gu",
+      "biel",
+      "gigi"
+    ],
+    "confirmados": []
+  },
+  {
+    "confirmado": false,
+    "codigo": "lpq31",
+    "nomes": [
+      "Mãe",
+      "guto"
+    ]
+  }
+]

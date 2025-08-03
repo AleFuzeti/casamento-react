@@ -7,6 +7,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Servir arquivos estáticos da pasta public
+app.use(express.static(path.join(__dirname, '../public')));
+
 const convidadosPath = path.join(__dirname, '../src/data/convidados.json');
 
 app.post('/api/confirmar', (req, res) => {
@@ -79,6 +82,18 @@ app.post('/api/confirmar', (req, res) => {
 app.get('/api/convidados', (req, res) => {
   const convidados = JSON.parse(fs.readFileSync(convidadosPath, 'utf8'));
   res.json(convidados);
+});
+
+// Rota para servir os presentes
+app.get('/api/presentes', (req, res) => {
+  const presentesPath = path.join(__dirname, '../public/static/presentes.json');
+  try {
+    const presentes = JSON.parse(fs.readFileSync(presentesPath, 'utf8'));
+    res.json(presentes);
+  } catch (err) {
+    console.error('❌ Erro ao ler presentes.json:', err);
+    res.status(500).json({ error: 'Erro ao carregar presentes' });
+  }
 });
 
 app.listen(4000, () => {

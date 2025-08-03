@@ -30,7 +30,7 @@ const Cerimonia = () => {
   return (
     <main>
       <section id="foto-casal">
-        <img src="/assets/foto-casal.jpg" alt="Foto do Casal" />
+        <img src={`${process.env.PUBLIC_URL}/assets/foto-casal.jpg`} alt="Foto do Casal" />
         <div className="overlay">
           <h1>Carolina e Alexandre</h1>
           <p>06.06.2026</p>
