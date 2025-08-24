@@ -1,17 +1,17 @@
 // src/App.jsx
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Importação dos componentes/páginas
-import Header from './components/Header';
-import Home from './pages/Home';
-import Cerimonia from './pages/Cerimonia';
-import ConfirmarPresenca from './pages/ConfirmarPresenca';
-import ListaDePresentes from './pages/ListaDePresentes';
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Cerimonia from "./pages/Cerimonia";
+import ConfirmarPresenca from "./pages/ConfirmarPresenca";
+import ListaDePresentes from "./pages/ListaDePresentes";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/casamento-react">
       <Header /> {/* Header fixo em todas as páginas */}
       <Routes>
         <Route path="/" element={<Home />} />
