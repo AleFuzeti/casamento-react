@@ -1,26 +1,36 @@
 // src/pages/Cerimonia.jsx
-import React, { useState, useEffect } from 'react';
-import '../styles/cerimonia.css';
-import FotoTexto from './FotoTexto';
+import React, { useState, useEffect } from "react";
+import "../styles/cerimonia.css";
+import FotoTexto from "./FotoTexto";
 
 const Cerimonia = () => {
-  const [countdown, setCountdown] = useState('');
+  const [countdown, setCountdown] = useState("");
 
   useEffect(() => {
-    const countDownDate = new Date('Jun 6, 2026 16:30:00').getTime();
+    const countDownDate = new Date("Jun 6, 2026 16:30:00").getTime();
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countDownDate - now;
 
       if (distance < 0) {
         clearInterval(interval);
-        setCountdown('O grande dia chegou!');
+        setCountdown("O grande dia chegou!");
       } else {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        setCountdown(`${String(days).padStart(2, '0')}:${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`);
+        setCountdown(
+          `${String(days).padStart(2, "0")}:${String(hours).padStart(
+            2,
+            "0"
+          )}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
+            2,
+            "0"
+          )}`
+        );
       }
     }, 1000);
 
@@ -30,19 +40,30 @@ const Cerimonia = () => {
   return (
     <main>
       <section id="foto-casal">
-        <img src={`${process.env.PUBLIC_URL}/assets/foto-casal.jpg`} alt="Foto do Casal" />
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/foto-casal.jpg`}
+          alt="Foto do Casal"
+        />
         <div className="overlay">
           <h1>Carolina e Alexandre</h1>
           <p>06.06.2026</p>
         </div>
       </section>
 
-      <FotoTexto titulo="A Cerimônia">
-        <p>Estamos muito felizes em compartilhar esse momento especial com você!</p>
-        <p>O nosso casamento será realizado no dia 06 de junho de 2026, às 16h30, na Chácara da Dinda em Londrina-PR.</p>
-        <p>Esperamos que você possa nos acompanhar nesse dia tão especial!</p>
-        <p>Com amor, Carolina e Alexandre.</p>
-      </FotoTexto>
+      <section id="conteudo-principal">
+        <FotoTexto titulo="A Cerimônia">
+          <p>
+            Estamos muito felizes em compartilhar esse momento especial com
+            você!
+          </p>
+          <p>
+            O nosso casamento será realizado no dia 06 de junho de 2026, às
+            16h30, na Chácara da Dinda em Londrina-PR.
+          </p>
+          <p>Esperamos que você possa nos acompanhar nesse dia tão especial!</p>
+          <p>Com amor, Carolina e Alexandre.</p>
+        </FotoTexto>
+      </section>
 
       <FotoTexto titulo="Cronograma">
         <table className="cronograma-table">
@@ -70,9 +91,18 @@ const Cerimonia = () => {
       </FotoTexto>
 
       <FotoTexto titulo="Traje">
-        <p>O traje para a cerimônia é esporte fino. Pedimos que os convidados evitem roupas muito informais, como shorts e chinelos.</p>
-        <p>Para os homens, sugerimos calça social e camisa de manga longa. Para as mulheres, vestido ou saia e blusa.</p>
-        <p>Esperamos que todos estejam confortáveis e elegantes para celebrar conosco!</p>
+        <p>
+          O traje para a cerimônia é esporte fino. Pedimos que os convidados
+          evitem roupas muito informais, como shorts e chinelos.
+        </p>
+        <p>
+          Para os homens, sugerimos calça social e camisa de manga longa. Para
+          as mulheres, vestido ou saia e blusa.
+        </p>
+        <p>
+          Esperamos que todos estejam confortáveis e elegantes para celebrar
+          conosco!
+        </p>
       </FotoTexto>
 
       <FotoTexto titulo="Cardápio">
@@ -94,13 +124,18 @@ const Cerimonia = () => {
             </tr>
             <tr>
               <td>Bebidas</td>
-              <td>Cerveja, Quentão, Energético, Água com e sem gás, Coca-Cola, Guaraná</td>
+              <td>
+                Cerveja, Quentão, Energético, Água com e sem gás, Coca-Cola,
+                Guaraná
+              </td>
             </tr>
             <tr>
               <td>Drinks</td>
               <td>
-                Moreco: Essência de morango com vodka/água com gás<br />
-                Drink da Carol: Maçã verde com vodka/água com gás<br />
+                Moreco: Essência de morango com vodka/água com gás
+                <br />
+                Drink da Carol: Maçã verde com vodka/água com gás
+                <br />
                 Drink do Ale: Essência de limão e hortelã com vodka/água com gás
               </td>
             </tr>
@@ -110,10 +145,21 @@ const Cerimonia = () => {
       </FotoTexto>
 
       <FotoTexto titulo="Local">
-        <p>A cerimônia será realizada na Chácara da Dinda, localizada em Londrina-PR.</p>
-        <p>O local possui uma linda área verde, ideal para a cerimônia ao ar livre.</p>
-        <p>Contamos com estacionamento próprio e segurança para garantir a tranquilidade de todos os convidados.</p>
-        <p>Esperamos que todos aproveitem o espaço e a natureza ao nosso redor!</p>
+        <p>
+          A cerimônia será realizada na Chácara da Dinda, localizada em
+          Londrina-PR.
+        </p>
+        <p>
+          O local possui uma linda área verde, ideal para a cerimônia ao ar
+          livre.
+        </p>
+        <p>
+          Contamos com estacionamento próprio e segurança para garantir a
+          tranquilidade de todos os convidados.
+        </p>
+        <p>
+          Esperamos que todos aproveitem o espaço e a natureza ao nosso redor!
+        </p>
         <div className="mapa">
           <iframe
             title="Mapa do local"
@@ -132,7 +178,10 @@ const Cerimonia = () => {
         <p>Faltam apenas:</p>
         <p id="countdown" className="digital-clock">
           {countdown.split("").map((char, index) => (
-            <span key={index} className={`digit ${char === ":" ? "colon" : ""}`}>
+            <span
+              key={index}
+              className={`digit ${char === ":" ? "colon" : ""}`}
+            >
               {char}
             </span>
           ))}
@@ -140,7 +189,6 @@ const Cerimonia = () => {
         <p>para o nosso "Sim".</p>
         <p>Esperamos que você esteja tão animado quanto nós!</p>
       </FotoTexto>
-
     </main>
   );
 };

@@ -17,18 +17,20 @@ const Home = () => {
         </div>
       </section>
 
-      <FotoTexto>
-        <p>
-          Carolina e Alexandre se conheceram em 2022, em uma festa (diz ele) ou
-          em um aplicativo de conversa (diz ela).
-        </p>
-        <p>.</p>
-        <p>
-          Cada dia que passava eles percebiam que o que mais queriam era ficar
-          juntos.
-        </p>
-        <p>.</p>
-      </FotoTexto>
+      <section id="conteudo-principal">
+        <FotoTexto>
+          <p>
+            Carolina e Alexandre se conheceram em 2022, em uma festa (diz ele)
+            ou em um aplicativo de conversa (diz ela).
+          </p>
+          <p>.</p>
+          <p>
+            Cada dia que passava eles percebiam que o que mais queriam era ficar
+            juntos.
+          </p>
+          <p>.</p>
+        </FotoTexto>
+      </section>
 
       <FotoTexto
         imagem={`${process.env.PUBLIC_URL}/assets/curiosidades.png`}
