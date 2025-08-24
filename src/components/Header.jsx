@@ -1,7 +1,7 @@
 // src/components/Header.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/home.css'; // ou importe o CSS globalmente
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/home.css"; // ou importe o CSS globalmente
 
 const Header = () => {
   return (
