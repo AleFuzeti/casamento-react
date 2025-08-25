@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/casamento-react/static/css/main.dbf392c9.css",
-    "main.js": "/casamento-react/static/js/main.a284625e.js",
+    "main.js": "/casamento-react/static/js/main.110dc28e.js",
     "index.html": "/casamento-react/index.html",
     "main.dbf392c9.css.map": "/casamento-react/static/css/main.dbf392c9.css.map",
-    "main.a284625e.js.map": "/casamento-react/static/js/main.a284625e.js.map"
+    "main.110dc28e.js.map": "/casamento-react/static/js/main.110dc28e.js.map"
   },
   "entrypoints": [
     "static/css/main.dbf392c9.css",
-    "static/js/main.a284625e.js"
+    "static/js/main.110dc28e.js"
   ]
 }
