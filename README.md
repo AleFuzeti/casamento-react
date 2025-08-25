@@ -12,4 +12,8 @@ Este projeto é um **site de casamento personalizado**, totalmente responsivo, c
 - **Lista de presentes**
 - **Confirmação de presenç**
 
+
+```
+npx concurrently "npm run start-react" "npm run start-server"
+```
 ---
